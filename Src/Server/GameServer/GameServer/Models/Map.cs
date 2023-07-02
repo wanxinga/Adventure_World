@@ -11,6 +11,7 @@ using Common.Data;
 using Network;
 using GameServer.Managers;
 using GameServer.Entities;
+using GameServer.Services;
 
 namespace GameServer.Models
 {
@@ -45,6 +46,8 @@ namespace GameServer.Models
         internal void Update()
         {
         }
+
+        
 
         /// <summary>
         /// 角色进入地图
@@ -108,6 +111,24 @@ namespace GameServer.Models
 
             byte[] data = PackageHandler.PackMessage(message);
             conn.SendData(data, 0, data.Length);
+        }
+
+        internal void UpdateEntity(NEntitySync entity)
+        {
+            foreach (var kv in this.MapCharacters)
+            {
+                if (kv.Value.character.entityId == entity.Id)
+                {
+                    kv.Value.character.Position = entity.Entity.Position;
+                    kv.Value.character.Direction = entity.Entity.Direction;
+                    kv.Value.character.Speed = entity.Entity.Speed;
+                }
+                else
+                {
+                    MapService.Instance.SendEntityUpdate(kv.Value.connection, entity);
+                }
+                
+            }
         }
     }
 }
