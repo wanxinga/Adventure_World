@@ -175,7 +175,7 @@ namespace GameServer.Services
             sender.SendData(data, 0, data.Length);
         }
 
-        private static void CharacterLeave(Character character)
+        public  void CharacterLeave(Character character)
         {
             CharacterManager.Instance.RemoveCharacter(character.Id);
             MapManager.Instance[character.Info.mapId].CharacterLeave(character);
