@@ -154,6 +154,28 @@ namespace GameServer.Services
             message.Response.gameEnter.Result = Result.Success;
             message.Response.gameEnter.Errormsg = "None";
 
+            message.Response.gameEnter.Character = character.Info;
+
+            int itemId = 1;
+            bool hasItem = character.ItemManager.HasItem(itemId);
+            Log.InfoFormat("HasItem:[{0}]{1}", itemId, hasItem);
+            if (hasItem)
+            {
+                character.ItemManager.RemoveItem(itemId, 1);
+            }
+            else
+            {
+                character.ItemManager.AddItem(itemId, 2);
+            }
+            Models.Item item = character.ItemManager.GetItem(itemId);
+
+            Log.InfoFormat("Item:[{0}][{1}]", itemId, item);
+            //foreach (var ite in character.Data.Items)
+            //{
+            //    Log.InfoFormat("数据库查询的数据:[{0}][{1}][{2}][{3}]", itemId, ite,ite.ItemID,ite.ItemCount);
+            //}
+            
+
             byte[] data = PackageHandler.PackMessage(message);
             sender.SendData(data, 0, data.Length);
             sender.Session.Character = character;
