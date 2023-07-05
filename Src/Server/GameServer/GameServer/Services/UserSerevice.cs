@@ -117,6 +117,11 @@ namespace GameServer.Services
                 MapPosY = 4000,
                 MapPosZ = 820,
             };
+            var bag = new TCharacterBag();
+            bag.Owner = character;
+            bag.Items = new byte[0];
+            bag.Unlocked = 20;
+            character.Bag = DBService.Instance.Entities.CharacterBags.Add(bag);
             character = DBService.Instance.Entities.Characters.Add(character);          
             sender.Session.User.Player.Characters.Add(character);
             DBService.Instance.Entities.SaveChanges();
@@ -156,20 +161,25 @@ namespace GameServer.Services
 
             message.Response.gameEnter.Character = character.Info;
 
-            int itemId = 1;
+            int itemId = 2;
             bool hasItem = character.ItemManager.HasItem(itemId);
             Log.InfoFormat("HasItem:[{0}]{1}", itemId, hasItem);
             if (hasItem)
             {
-                character.ItemManager.RemoveItem(itemId, 1);
+                //character.ItemManager.RemoveItem(itemId, 1);
             }
             else
             {
-                character.ItemManager.AddItem(itemId, 2);
+                character.ItemManager.AddItem(1, 200);
+                character.ItemManager.AddItem(2, 100);
+                character.ItemManager.AddItem(3, 30);
+                character.ItemManager.AddItem(4, 120);
+
             }
             Models.Item item = character.ItemManager.GetItem(itemId);
 
             Log.InfoFormat("Item:[{0}][{1}]", itemId, item);
+            DBService.Instance.Save();
             //foreach (var ite in character.Data.Items)
             //{
             //    Log.InfoFormat("数据库查询的数据:[{0}][{1}][{2}][{3}]", itemId, ite,ite.ItemID,ite.ItemCount);
