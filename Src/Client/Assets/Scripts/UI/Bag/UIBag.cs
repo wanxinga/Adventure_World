@@ -31,7 +31,8 @@ public class UIBag : UIWindow {
 
     IEnumerator InitBags()
     {
-		for(int i = 0; i < BagManager.Instance.Items.Length; i++)
+        this.money.text = User.Instance.CurrentCharacter.Gold.ToString();
+        for (int i = 0; i < BagManager.Instance.Items.Length; i++)
         {
 			var item = BagManager.Instance.Items[i];
             if (item.ItemId > 0)
@@ -49,6 +50,17 @@ public class UIBag : UIWindow {
         yield return null;
     }
 
+    void Clear()
+    {
+        for(int i = 0; i < slots.Count; i++)
+        {
+            if (slots[i].transform.childCount > 0)
+            {
+                Destroy(slots[i].transform.GetChild(0).gameObject);
+            }
+        }
+    }
+
     public void SetTitle(string title)
     {
         this.money.text = User.Instance.CurrentCharacter.Id.ToString();
@@ -57,5 +69,7 @@ public class UIBag : UIWindow {
     public void OnReset()
     {
         BagManager.Instance.Reset();
+        this.Clear();
+        StartCoroutine(InitBags());
     }
 }

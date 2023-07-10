@@ -58,6 +58,8 @@ namespace Managers
             }
         }
 
+      
+
         unsafe void Analyze(byte[] data)
         {
             fixed (byte* pt = data)
@@ -70,6 +72,8 @@ namespace Managers
             }
         }
 
+      
+
         unsafe public NBagInfo GetBagInfo()
         {
             fixed (byte* pt = Info.Items)
@@ -81,6 +85,57 @@ namespace Managers
                 }
             }
             return this.Info;
+        }
+
+        public void AddItem(int itemId, int count)
+        {
+            ushort addCount = (ushort)count;
+            for(int i = 0; i < Items.Length; i++)
+            {
+                if (this.Items[i].ItemId == itemId)
+                {
+                    ushort canAdd = (ushort)(DataManager.Instance.Items[itemId].StackLimit - this.Items[i].Count);
+                    if (canAdd >= addCount)
+                    {
+                        this.Items[i].Count += addCount;
+                        addCount = 0;
+                        break;
+                    }
+                    else
+                    {
+                        this.Items[i].Count += canAdd;
+                        addCount -= canAdd;
+                    }
+                }
+            }
+            if (addCount > 0)
+            {
+                ushort canAdd = (ushort)DataManager.Instance.Items[itemId].StackLimit;
+                for (int i = 0; i < Items.Length; i++)
+                {
+                    if (this.Items[i].ItemId == 0)
+                    {
+                        this.Items[i].ItemId = (ushort)itemId;
+                        
+                        if (canAdd >= addCount)
+                        {
+                            this.Items[i].Count = addCount;
+                            addCount = 0;
+                            break;
+                        }
+                        else
+                        {
+                            this.Items[i].Count = canAdd;
+                            addCount -= canAdd;
+                        }
+                    }
+                }
+            }
+        }
+
+        public void RemoveItem(int itemId, int count)
+        {
+
         }
     }
 }
