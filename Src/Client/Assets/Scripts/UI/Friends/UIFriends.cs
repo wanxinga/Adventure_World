@@ -82,7 +82,7 @@ public class UIFriends : UIWindow {
 
 	}
 
-		public void OnClickFriendRemove()
+	public void OnClickFriendRemove()
 	{
         if (selectedItem == null)
         {
