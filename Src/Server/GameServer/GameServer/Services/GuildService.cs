@@ -21,6 +21,8 @@ namespace GameServer.Services
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<GuildJoinRequest>(this.OnGuildJoinRequest);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<GuildJoinResponse>(this.OnGuildJoinResponse);
             MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<GuildLeaveRequest>(this.OnGuildLeave);
+            MessageDistributer<NetConnection<NetSession>>.Instance.Subscribe<GuildAdminRequest>(this.OnGuildAdmin);
+
         }
 
 
@@ -134,6 +136,37 @@ namespace GameServer.Services
             DBService.Instance.Save();
 
             sender.Session.Response.guildLeave.Result = Result.Success;
+            sender.SendResponse();
+        }
+
+        private void OnGuildAdmin(NetConnection<NetSession> sender, GuildAdminRequest message)
+        {
+            Character character = sender.Session.Character;
+            Log.InfoFormat("OnGuildAdmin: : character:{0}",  character.Id);
+            sender.Session.Response.guildAdmin = new GuildAdminResponse();
+            if (character.Guild == null)
+            {
+                sender.Session.Response.guildAdmin.Result = Result.Failed;
+                sender.Session.Response.guildAdmin.Errormsg = "你没有公会不要乱来";
+                sender.SendResponse();
+                return;
+            }
+
+            character.Guild.ExecuteAdmin(message.Command, message.Target, character.Id);
+
+            var target = SessionManager.Instance.GetSession(message.Target);
+
+            if (target!=null)
+            {
+                target.Session.Response.guildAdmin = new GuildAdminResponse();
+                target.Session.Response.guildAdmin.Result = Result.Success;
+                target.Session.Response.guildAdmin.Command = message;
+                target.SendResponse();
+                return;
+            }
+
+            sender.Session.Response.guildAdmin.Result = Result.Success;
+            sender.Session.Response.guildAdmin.Command = message;
             sender.SendResponse();
         }
 

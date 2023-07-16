@@ -1,150 +1,195 @@
-2023-07-13 23:15:57,472 [ 1] INFO  Unity: LoadingManager start
-2023-07-13 23:16:00,831 [ 1] INFO  Unity: DataManager > DataManager()
-2023-07-13 23:16:07,519 [ 1] INFO  Unity: UserLoginRequest::user :admin psw:1
-2023-07-13 23:16:07,528 [ 1] INFO  Unity: ConnectToServer() Start 
-2023-07-13 23:16:07,543 [ 1] INFO  Unity: DoConnect
-2023-07-13 23:16:07,545 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
-2023-07-13 23:16:07,561 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
+2023-07-14 09:59:06,417 [ 1] INFO  Unity: LoadingManager start
+2023-07-14 09:59:09,450 [ 1] INFO  Unity: DataManager > DataManager()
+2023-07-14 09:59:19,010 [ 1] INFO  Unity: UserLoginRequest::user :admin psw:1
+2023-07-14 09:59:19,012 [ 1] INFO  Unity: ConnectToServer() Start 
+2023-07-14 09:59:19,016 [ 1] INFO  Unity: DoConnect
+2023-07-14 09:59:19,017 [ 1] INFO  Unity: NetClient.DoConnect on 127.0.0.1:8000
+2023-07-14 09:59:19,022 [ 1] INFO  Unity: Connect[0] to server 127.0.0.1:8000
 
-2023-07-13 23:16:07,576 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
-2023-07-13 23:16:10,243 [ 1] INFO  Unity: OnLogin:Success [None]
-2023-07-13 23:16:10,249 [ 1] INFO  Unity: LoadLevel: CharSelect
-2023-07-13 23:16:10,535 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-07-13 23:16:11,316 [ 1] INFO  Unity: Select Char:[1]111[Wizard]
-2023-07-13 23:16:12,145 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
-2023-07-13 23:16:12,349 [ 1] INFO  Unity: OnGameEnter:Success [None]
-2023-07-13 23:16:12,362 [ 1] INFO  Unity: ItemManager:Init[Id:1,Count:20]
-2023-07-13 23:16:12,364 [ 1] INFO  Unity: ItemManager:Init[Id:2,Count:20]
-2023-07-13 23:16:12,364 [ 1] INFO  Unity: ItemManager:Init[Id:4,Count:10]
-2023-07-13 23:16:12,434 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
-2023-07-13 23:16:12,441 [ 1] INFO  Unity: AddCharacter:1:111 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-07-13 23:16:12,451 [ 1] INFO  Unity: LoadLevel: MainCity
-2023-07-13 23:16:13,220 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2023-07-14 09:59:19,027 [ 1] INFO  Unity: LoadingMesager::OnGameServerConnect :0 reason:Success
+2023-07-14 09:59:21,331 [ 1] INFO  Unity: OnLogin:Success [None]
+2023-07-14 09:59:21,333 [ 1] INFO  Unity: LoadLevel: CharSelect
+2023-07-14 09:59:21,606 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-07-14 09:59:22,596 [ 1] INFO  Unity: Select Char:[1]111[Wizard]
+2023-07-14 09:59:31,710 [ 1] INFO  Unity: UserGameEnterRequest::characterId :0
+2023-07-14 09:59:31,865 [ 1] INFO  Unity: OnGameEnter:Success [None]
+2023-07-14 09:59:31,867 [ 1] INFO  Unity: ItemManager:Init[Id:1,Count:20]
+2023-07-14 09:59:31,868 [ 1] INFO  Unity: ItemManager:Init[Id:2,Count:20]
+2023-07-14 09:59:31,869 [ 1] INFO  Unity: ItemManager:Init[Id:4,Count:10]
+2023-07-14 09:59:31,885 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
+2023-07-14 09:59:31,887 [ 1] INFO  Unity: AddCharacter:1:111 Map:1 Entity:(1:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-07-14 09:59:31,890 [ 1] INFO  Unity: LoadLevel: MainCity
+2023-07-14 09:59:32,508 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2023-07-13 23:16:13,228 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
+2023-07-14 09:59:32,508 [ 1] WARN  Unity: No mesh data available for mesh Sphere001 on particle system fx_portal. Make sure Read/Write Enabled is set in the importer to work on the particle system renderer
 
-2023-07-13 23:16:13,331 [ 1] WARN  Unity: MainPlayerCamera[-873976] Awake
+2023-07-14 09:59:32,613 [ 1] WARN  Unity: MainPlayerCamera[-68264] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:24)
 
-2023-07-13 23:16:13,332 [ 1] WARN  Unity: GameObjectManager[-873928] Awake
+2023-07-14 09:59:32,613 [ 1] WARN  Unity: GameObjectManager[-68216] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:24)
 
-2023-07-13 23:16:13,348 [ 1] WARN  Unity: UIMain[201938] Awake
+2023-07-14 09:59:32,619 [ 1] WARN  Unity: UIMain[62564] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:24)
 
-2023-07-13 23:16:13,349 [ 1] WARN  Unity: UIWorldElementManager[202854] Awake
+2023-07-14 09:59:32,620 [ 1] WARN  Unity: UIWorldElementManager[63480] Awake
 UnityEngine.Debug:LogWarningFormat(String, Object[])
 MonoSingleton`1:Awake() (at Assets/Scripts/Utilities/MonoSingleton.cs:24)
 
-2023-07-13 23:16:13,397 [ 1] INFO  Unity: LevelLoadCompleted:1
-2023-07-13 23:16:14,267 [ 1] INFO  Unity: MoveBack
-2023-07-13 23:16:14,274 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(5000,4000,820) DIR:(100,0,0) SPD:-300
-2023-07-13 23:16:15,190 [ 1] INFO  Unity: Stop
-2023-07-13 23:16:15,191 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(4725,4000,820) DIR:(100,0,0) SPD:0
-2023-07-13 23:16:25,939 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
-2023-07-13 23:16:25,941 [ 1] INFO  Unity: AddCharacter:2:222 Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
-2023-07-13 23:16:25,966 [ 1] INFO  Unity: OnFriendList
-2023-07-13 23:16:29,855 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(98, -18, 0) SPD:0 
-2023-07-13 23:16:29,857 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+2023-07-14 09:59:32,652 [ 1] INFO  Unity: LevelLoadCompleted:1
+2023-07-14 09:59:33,853 [ 1] INFO  Unity: SetDirection:(98, -18, 0)
+2023-07-14 09:59:33,854 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(5000,4000,820) DIR:(98,-18,0) SPD:0
+2023-07-14 09:59:33,951 [ 1] INFO  Unity: SetDirection:(94, -35, 0)
+2023-07-14 09:59:33,952 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(5000,4000,820) DIR:(94,-35,0) SPD:0
+2023-07-14 09:59:34,034 [ 1] INFO  Unity: SetDirection:(86, -51, 0)
+2023-07-14 09:59:34,035 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(5000,4000,820) DIR:(86,-51,0) SPD:0
+2023-07-14 09:59:34,133 [ 1] INFO  Unity: SetDirection:(74, -68, 0)
+2023-07-14 09:59:34,134 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(5000,4000,820) DIR:(74,-68,0) SPD:0
+2023-07-14 09:59:34,234 [ 1] INFO  Unity: SetDirection:(58, -81, 0)
+2023-07-14 09:59:34,235 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(5000,4000,820) DIR:(58,-81,0) SPD:0
+2023-07-14 09:59:34,316 [ 1] INFO  Unity: SetDirection:(43, -90, 0)
+2023-07-14 09:59:34,317 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(5000,4000,820) DIR:(43,-90,0) SPD:0
+2023-07-14 09:59:34,432 [ 1] INFO  Unity: SetDirection:(26, -97, 0)
+2023-07-14 09:59:34,433 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(5000,4000,820) DIR:(26,-97,0) SPD:0
+2023-07-14 09:59:35,079 [ 1] INFO  Unity: MoveBack
+2023-07-14 09:59:35,081 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(5000,4000,820) DIR:(26,-97,0) SPD:-300
+2023-07-14 09:59:36,503 [ 1] INFO  Unity: Stop
+2023-07-14 09:59:36,504 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(4915,4425,820) DIR:(26,-97,0) SPD:0
+2023-07-14 09:59:48,995 [ 1] INFO  Unity: OnMapCharacterEnter:Map:1 Count:1
+2023-07-14 09:59:48,996 [ 1] INFO  Unity: AddCharacter:2:222 Map:1 Entity:(2:pos:(5000,4000,820),dir:(100,0,0),spd:0
+2023-07-14 09:59:49,015 [ 1] INFO  Unity: OnFriendList
+2023-07-14 09:59:53,864 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(98, -18, 0) SPD:0 
+2023-07-14 09:59:53,869 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
    [2]evt:None entity:(2:pos:(5000,4000,820),dir:(98,-18,0),spd:0
 
-2023-07-13 23:16:29,918 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(93, -35, 0) SPD:0 
-2023-07-13 23:16:29,919 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
-   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(93,-35,0),spd:0
+2023-07-14 09:59:54,004 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(93, -36, 0) SPD:0 
+2023-07-14 09:59:54,007 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(93,-36,0),spd:0
 
-2023-07-13 23:16:29,992 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(86, -51, 0) SPD:0 
-2023-07-13 23:16:29,993 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
-   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(86,-51,0),spd:0
+2023-07-14 09:59:54,128 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(84, -54, 0) SPD:0 
+2023-07-14 09:59:54,131 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(84,-54,0),spd:0
 
-2023-07-13 23:16:30,108 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(76, -65, 0) SPD:0 
-2023-07-13 23:16:30,109 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
-   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(76,-65,0),spd:0
+2023-07-14 09:59:54,133 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(73, -68, 0) SPD:0 
+2023-07-14 09:59:54,135 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(73,-68,0),spd:0
 
-2023-07-13 23:16:30,277 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(63, -77, 0) SPD:0 
-2023-07-13 23:16:30,278 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
-   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(63,-77,0),spd:0
+2023-07-14 09:59:54,301 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(60, -80, 0) SPD:0 
+2023-07-14 09:59:54,303 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(60,-80,0),spd:0
 
-2023-07-13 23:16:30,279 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(47, -88, 0) SPD:0 
-2023-07-13 23:16:30,280 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
-   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(47,-88,0),spd:0
+2023-07-14 09:59:54,324 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(42, -91, 0) SPD:0 
+2023-07-14 09:59:54,325 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(42,-91,0),spd:0
 
-2023-07-13 23:16:41,155 [ 1] INFO  Unity: OnFriendList
-2023-07-13 23:16:41,479 [ 1] ERROR Unity: Message handler exception:, The object of type 'UIFriendItem' has been destroyed but you are still trying to access it.
+2023-07-14 09:59:54,435 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(22, -97, 0) SPD:0 
+2023-07-14 09:59:54,437 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(22,-97,0),spd:0
+
+2023-07-14 09:59:54,508 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(2, -100, 0) SPD:0 
+2023-07-14 09:59:54,510 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(2,-100,0),spd:0
+
+2023-07-14 09:59:54,595 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(-16, -99, 0) SPD:0 
+2023-07-14 09:59:54,597 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(-16,-99,0),spd:0
+
+2023-07-14 09:59:54,751 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(-35, -94, 0) SPD:0 
+2023-07-14 09:59:54,752 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(-35,-94,0),spd:0
+
+2023-07-14 09:59:54,837 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(-51, -86, 0) SPD:0 
+2023-07-14 09:59:54,839 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(-51,-86,0),spd:0
+
+2023-07-14 09:59:54,969 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(-66, -75, 0) SPD:0 
+2023-07-14 09:59:54,971 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(-66,-75,0),spd:0
+
+2023-07-14 09:59:55,088 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(-80, -60, 0) SPD:0 
+2023-07-14 09:59:55,090 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(-80,-60,0),spd:0
+
+2023-07-14 09:59:55,207 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(-91, -42, 0) SPD:0 
+2023-07-14 09:59:55,209 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(-91,-42,0),spd:0
+
+2023-07-14 09:59:55,283 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(-97, -22, 0) SPD:0 
+2023-07-14 09:59:55,285 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(-97,-22,0),spd:0
+
+2023-07-14 09:59:55,424 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(-100, -2, 0) SPD:0 
+2023-07-14 09:59:55,428 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(-100,-2,0),spd:0
+
+2023-07-14 09:59:55,522 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(-99, 16, 0) SPD:0 
+2023-07-14 09:59:55,526 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(-99,16,0),spd:0
+
+2023-07-14 09:59:55,674 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(-94, 35, 0) SPD:0 
+2023-07-14 09:59:55,675 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(-94,35,0),spd:0
+
+2023-07-14 09:59:55,737 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(-86, 51, 0) SPD:0 
+2023-07-14 09:59:55,740 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(-86,51,0),spd:0
+
+2023-07-14 09:59:55,876 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(-75, 66, 0) SPD:0 
+2023-07-14 09:59:55,878 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(-75,66,0),spd:0
+
+2023-07-14 09:59:56,043 [ 1] INFO  Unity: OnEntityChanged :ID:2 POS:(5000, 4000, 820) DIR:(-62, 78, 0) SPD:0 
+2023-07-14 09:59:56,044 [ 1] INFO  Unity: MapEntityUpdateResponse: Entitys:1
+   [2]evt:None entity:(2:pos:(5000,4000,820),dir:(-62,78,0),spd:0
+
+2023-07-14 10:00:05,596 [ 1] INFO  Unity: SendTeamInviteRequest
+2023-07-14 10:00:14,574 [ 1] INFO  Unity: OnFriendList
+2023-07-14 10:00:14,580 [ 1] INFO  Unity: OnTeamInfo
+2023-07-14 10:00:22,184 [ 1] INFO  Unity: SendTeamLeaveRequest
+2023-07-14 10:00:22,262 [ 1] INFO  Unity: OnFriendList
+2023-07-14 10:00:29,914 [ 1] INFO  Unity: SendTeamInviteResponse
+2023-07-14 10:00:30,076 [ 1] INFO  Unity: OnFriendList
+2023-07-14 10:00:30,079 [ 1] ERROR Unity: Message handler exception:, The object of type 'UIFriendItem' has been destroyed but you are still trying to access it.
 Your script should either check if it is null or you should not destroy the object., Assembly-CSharp,   at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at ListView.RemoveAll () [0x0001d] in D:\Unity3D\mmoProject\mymmorpg\Src\Client\Assets\Scripts\UI\ListView\ListView.cs:77 
+  at ListView.RemoveAll () [0x00039] in D:\Unity3D\mmoProject\mymmorpg\Src\Client\Assets\Scripts\UI\ListView\ListView.cs:79 
   at UIFriends.ClearFriendList () [0x00007] in D:\Unity3D\mmoProject\mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:117 
   at UIFriends.RefreshUI () [0x00002] in D:\Unity3D\mmoProject\mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:100 
   at Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) [0x0002c] in D:\Unity3D\mmoProject\mymmorpg\Src\Client\Assets\Scripts\Services\FriendService.cs:109 
   at Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) [0x00000] in <filename unknown>:0 
-2023-07-13 23:16:41,985 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+2023-07-14 10:00:30,082 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
 {1}</format><args>{MissingReferenceException: The object of type 'UIFriendItem' has been destroyed but you are still trying to access it.
-Your script should either check if it is null or you should not destroy the object., ListView.RemoveAll () (at Assets/Scripts/UI/ListView/ListView.cs:77)
+Your script should either check if it is null or you should not destroy the object., ListView.RemoveAll () (at Assets/Scripts/UI/ListView/ListView.cs:79)
 UIFriends.ClearFriendList () (at Assets/Scripts/UI/Friends/UIFriends.cs:117)
 UIFriends.RefreshUI () (at Assets/Scripts/UI/Friends/UIFriends.cs:100)
 Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) (at Assets/Scripts/Services/FriendService.cs:109)
 Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg)
 }</args></log4net.Error>
-2023-07-13 23:16:45,569 [ 1] INFO  Unity: SetDirection:(98, -19, 0)
-2023-07-13 23:16:45,570 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(4725,4000,820) DIR:(98,-19,0) SPD:0
-2023-07-13 23:16:45,671 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
-2023-07-13 23:16:45,672 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(4725,4000,820) DIR:(93,-37,0) SPD:0
-2023-07-13 23:16:45,768 [ 1] INFO  Unity: SetDirection:(84, -55, 0)
-2023-07-13 23:16:45,769 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(4725,4000,820) DIR:(84,-55,0) SPD:0
-2023-07-13 23:16:45,901 [ 1] INFO  Unity: SetDirection:(72, -69, 0)
-2023-07-13 23:16:45,902 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(4725,4000,820) DIR:(72,-69,0) SPD:0
-2023-07-13 23:16:47,045 [ 1] INFO  Unity: SetDirection:(83, -55, 0)
-2023-07-13 23:16:47,046 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(4725,4000,820) DIR:(83,-55,0) SPD:0
-2023-07-13 23:16:47,148 [ 1] INFO  Unity: SetDirection:(93, -37, 0)
-2023-07-13 23:16:47,150 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(4725,4000,820) DIR:(93,-37,0) SPD:0
-2023-07-13 23:16:47,249 [ 1] INFO  Unity: SetDirection:(99, -17, 0)
-2023-07-13 23:16:47,251 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(4725,4000,820) DIR:(99,-17,0) SPD:0
-2023-07-13 23:16:47,355 [ 1] INFO  Unity: SetDirection:(100, 3, 0)
-2023-07-13 23:16:47,356 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(4725,4000,820) DIR:(100,3,0) SPD:0
-2023-07-13 23:16:47,470 [ 1] INFO  Unity: SetDirection:(98, 22, 0)
-2023-07-13 23:16:47,471 [ 1] INFO  Unity: MapEntityUpdateRequest :ID:1 POS:(4725,4000,820) DIR:(98,22,0) SPD:0
-2023-07-13 23:18:49,595 [ 1] INFO  Unity: SendTeamInviteResponse
-2023-07-13 23:19:11,355 [ 1] INFO  Unity: OnFriendList
-2023-07-13 23:19:11,742 [ 1] ERROR Unity: Message handler exception:, The object of type 'UIFriendItem' has been destroyed but you are still trying to access it.
+2023-07-14 10:00:49,666 [ 1] INFO  Unity: OnMapCharacterLeave: CharID:2
+2023-07-14 10:00:49,667 [ 1] INFO  Unity: RemoveCharacter:2
+2023-07-14 10:00:49,669 [ 1] INFO  Unity: OnFriendList
+2023-07-14 10:00:49,669 [ 1] ERROR Unity: Message handler exception:, The object of type 'UIFriendItem' has been destroyed but you are still trying to access it.
 Your script should either check if it is null or you should not destroy the object., Assembly-CSharp,   at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at ListView.RemoveAll () [0x0001d] in D:\Unity3D\mmoProject\mymmorpg\Src\Client\Assets\Scripts\UI\ListView\ListView.cs:77 
+  at ListView.RemoveAll () [0x00039] in D:\Unity3D\mmoProject\mymmorpg\Src\Client\Assets\Scripts\UI\ListView\ListView.cs:79 
   at UIFriends.ClearFriendList () [0x00007] in D:\Unity3D\mmoProject\mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:117 
   at UIFriends.RefreshUI () [0x00002] in D:\Unity3D\mmoProject\mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:100 
   at Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) [0x0002c] in D:\Unity3D\mmoProject\mymmorpg\Src\Client\Assets\Scripts\Services\FriendService.cs:109 
   at Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) [0x00000] in <filename unknown>:0 
-2023-07-13 23:19:12,106 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
+2023-07-14 10:00:49,670 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
 {1}</format><args>{MissingReferenceException: The object of type 'UIFriendItem' has been destroyed but you are still trying to access it.
-Your script should either check if it is null or you should not destroy the object., ListView.RemoveAll () (at Assets/Scripts/UI/ListView/ListView.cs:77)
+Your script should either check if it is null or you should not destroy the object., ListView.RemoveAll () (at Assets/Scripts/UI/ListView/ListView.cs:79)
 UIFriends.ClearFriendList () (at Assets/Scripts/UI/Friends/UIFriends.cs:117)
 UIFriends.RefreshUI () (at Assets/Scripts/UI/Friends/UIFriends.cs:100)
 Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) (at Assets/Scripts/Services/FriendService.cs:109)
 Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg)
 }</args></log4net.Error>
-2023-07-13 23:25:20,080 [ 1] INFO  Unity: OnMapCharacterLeave: CharID:2
-2023-07-13 23:25:20,080 [ 1] INFO  Unity: RemoveCharacter:2
-2023-07-13 23:25:20,083 [ 1] INFO  Unity: OnFriendList
-2023-07-13 23:25:20,347 [ 1] ERROR Unity: Message handler exception:, The object of type 'UIFriendItem' has been destroyed but you are still trying to access it.
-Your script should either check if it is null or you should not destroy the object., Assembly-CSharp,   at (wrapper managed-to-native) UnityEngine.Component:get_gameObject ()
-  at ListView.RemoveAll () [0x0001d] in D:\Unity3D\mmoProject\mymmorpg\Src\Client\Assets\Scripts\UI\ListView\ListView.cs:77 
-  at UIFriends.ClearFriendList () [0x00007] in D:\Unity3D\mmoProject\mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:117 
-  at UIFriends.RefreshUI () [0x00002] in D:\Unity3D\mmoProject\mymmorpg\Src\Client\Assets\Scripts\UI\Friends\UIFriends.cs:100 
-  at Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) [0x0002c] in D:\Unity3D\mmoProject\mymmorpg\Src\Client\Assets\Scripts\Services\FriendService.cs:109 
-  at Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg) [0x00000] in <filename unknown>:0 
-2023-07-13 23:25:20,628 [ 1] FATAL Unity: <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>{0
-{1}</format><args>{MissingReferenceException: The object of type 'UIFriendItem' has been destroyed but you are still trying to access it.
-Your script should either check if it is null or you should not destroy the object., ListView.RemoveAll () (at Assets/Scripts/UI/ListView/ListView.cs:77)
-UIFriends.ClearFriendList () (at Assets/Scripts/UI/Friends/UIFriends.cs:117)
-UIFriends.RefreshUI () (at Assets/Scripts/UI/Friends/UIFriends.cs:100)
-Services.FriendService.OnFriendList (System.Object sender, SkillBridge.Message.FriendListResponse message) (at Assets/Scripts/Services/FriendService.cs:109)
-Network.MessageDistributer`1[System.Object].RaiseEvent[FriendListResponse] (System.Object sender, SkillBridge.Message.FriendListResponse msg)
-}</args></log4net.Error>
-2023-07-13 23:25:20,634 [ 1] INFO  Unity: Character_2_222 OnDestroy :ID:2 POS:(5000, 4000, 820) DIR:(47, -88, 0) SPD:0 
-2023-07-13 23:25:28,148 [ 1] INFO  Unity: Character_1_111 OnDestroy :ID:1 POS:(4725, 4000, 820) DIR:(98, 22, 0) SPD:0 
-2023-07-13 23:25:28,149 [ 1] INFO  Unity: OnDestroy NetworkManager.
-2023-07-13 23:25:28,150 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
+2023-07-14 10:00:49,671 [ 1] INFO  Unity: Character_2_222 OnDestroy :ID:2 POS:(5000, 4000, 820) DIR:(-62, 78, 0) SPD:0 
+2023-07-14 10:00:55,294 [ 1] INFO  Unity: OnDestroy NetworkManager.
+2023-07-14 10:00:55,295 [ 1] WARN  Unity: CloseConnection(), errorCode: 1007
 UnityEngine.Debug:LogWarning(Object)
 Network.NetClient:CloseConnection(Int32) (at Assets/Scripts/Network/NetClient.cs:177)
 Network.NetClient:OnDestroy() (at Assets/Scripts/Network/NetClient.cs:172)
 
+2023-07-14 10:00:55,300 [ 1] INFO  Unity: Character_1_111 OnDestroy :ID:1 POS:(4915, 4425, 820) DIR:(26, -97, 0) SPD:0 

@@ -99,9 +99,11 @@ namespace GameServer.Entities
                 if (this.Info.Guild == null)
                 {
                     this.Info.Guild = this.Guild.GuildInfo(this);
+                    //TODO 应该是进入游戏不是进入地图
                     if (message.mapCharacterEnter != null)
                         GuildUpdateTS = Guild.timestamp;
                 }
+                                                   //TODO 应该是进入游戏不是进入地图
                 if (GuildUpdateTS < this.Guild.timestamp&&message.mapCharacterEnter==null)
                 {
                     GuildUpdateTS = Guild.timestamp;

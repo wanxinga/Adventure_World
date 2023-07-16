@@ -141,7 +141,7 @@ class Time
     }
 
 
-    public static int timestamp
+    public static double timestamp
     {
         get { return GetTimestamp(DateTime.Now); }
     }
