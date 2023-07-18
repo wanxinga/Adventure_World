@@ -730,7 +730,7 @@ message ChatResponse
 	string errormsg = 2;
 	repeated ChatMessage localMessages = 3;
 	repeated ChatMessage worldMessages = 4;
-	repeated ChatMessage systemMssages = 5;
+	repeated ChatMessage systemMessages = 5;
 	repeated ChatMessage privateMessages = 6;
 	repeated ChatMessage teamMessages = 7;
 	repeated ChatMessage guildMessages = 8;

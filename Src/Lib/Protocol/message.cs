@@ -1489,7 +1489,7 @@ namespace SkillBridge.Message
         public global::System.Collections.Generic.List<ChatMessage> worldMessages { get; } = new global::System.Collections.Generic.List<ChatMessage>();
 
         [global::ProtoBuf.ProtoMember(5)]
-        public global::System.Collections.Generic.List<ChatMessage> systemMssages { get; } = new global::System.Collections.Generic.List<ChatMessage>();
+        public global::System.Collections.Generic.List<ChatMessage> systemMessages { get; } = new global::System.Collections.Generic.List<ChatMessage>();
 
         [global::ProtoBuf.ProtoMember(6)]
         public global::System.Collections.Generic.List<ChatMessage> privateMessages { get; } = new global::System.Collections.Generic.List<ChatMessage>();
