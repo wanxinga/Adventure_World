@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using GameServer;
 using GameServer.Entities;
+using GameServer.Managers;
 using GameServer.Services;
 using SkillBridge.Message;
 
@@ -20,10 +21,16 @@ namespace Network
 
         public void Disconnected()
         {
-            this.PostResponser = null;
+            if (CharacterManager.Instance.GetCharacter(this.Character.Id) == null)
+            {
+                this.PostResponser = null;
+                this.Character = null;
+            }
             if (this.Character != null)
             {
                 UserService.Instance.CharacterLeave(this.Character);
+                this.PostResponser = null;
+                this.Character = null;
             }
         }
 
