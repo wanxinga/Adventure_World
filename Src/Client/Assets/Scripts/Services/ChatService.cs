@@ -1,4 +1,5 @@
 ﻿using Managers;
+using Models;
 using Network;
 using SkillBridge.Message;
 using System;
@@ -46,17 +47,21 @@ namespace Services
 
         private void OnChat(object sender, ChatResponse message)
         {
-            if (message.Result == Result.Success)
+            if (User.Instance.CurrentCharacter != null)
             {
-                ChatManager.Instance.AddMessages(ChatChannel.Local, message.localMessages);
-                ChatManager.Instance.AddMessages(ChatChannel.World, message.worldMessages);
-                ChatManager.Instance.AddMessages(ChatChannel.System, message.systemMessages);
-                ChatManager.Instance.AddMessages(ChatChannel.Guild, message.guildMessages);
-                ChatManager.Instance.AddMessages(ChatChannel.Team, message.teamMessages);
-                ChatManager.Instance.AddMessages(ChatChannel.Private, message.privateMessages);
+                if (message.Result == Result.Success)
+                {
+                    ChatManager.Instance.AddMessages(ChatChannel.Local, message.localMessages);
+                    ChatManager.Instance.AddMessages(ChatChannel.World, message.worldMessages);
+                    ChatManager.Instance.AddMessages(ChatChannel.System, message.systemMessages);
+                    ChatManager.Instance.AddMessages(ChatChannel.Guild, message.guildMessages);
+                    ChatManager.Instance.AddMessages(ChatChannel.Team, message.teamMessages);
+                    ChatManager.Instance.AddMessages(ChatChannel.Private, message.privateMessages);
+                }
+                else
+                    ChatManager.Instance.AddSystemMessage(message.Errormsg);
             }
-            else
-                ChatManager.Instance.AddSystemMessage(message.Errormsg);
+            
         }
     }
 }

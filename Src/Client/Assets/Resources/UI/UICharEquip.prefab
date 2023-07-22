@@ -1323,6 +1323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27ea806571eef84dbc5f61999947c21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Root: {fileID: 0}
   title: {fileID: 114419860254050140}
   money: {fileID: 114647394457392082}
   itemPrefab: {fileID: 1971211564620592, guid: d12a19a4fe2f16b4d9a8361e6caea454, type: 2}
@@ -1528,8 +1529,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114844438769136076}
   m_HandleRect: {fileID: 224573430232023852}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.7479611
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3080,7 +3081,7 @@ RectTransform:
   m_Father: {fileID: 224963607231703870}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.25203913}
+  m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -3437,5 +3438,5 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.000003881826, y: -0.00004878181}
-  m_SizeDelta: {x: 0, y: 637.6}
+  m_SizeDelta: {x: 0, y: 476.9}
   m_Pivot: {x: 0, y: 1}

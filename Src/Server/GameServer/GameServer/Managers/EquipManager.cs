@@ -19,14 +19,15 @@ namespace GameServer.Managers
             if (!character.ItemManager.Items.ContainsKey(itemId))
                 return Result.Failed;
 
-            UpdateEquip(character.Data.Equips, slot, itemId, isEquip);
+            character.Data.Equips = UpdateEquip(character.Data.Equips, slot, itemId, isEquip);
 
             DBService.Instance.Save();
             return Result.Success;
         }
 
-        unsafe void UpdateEquip(byte[] equipData, int slot, int itemId, bool isEquip)
+        unsafe byte[] UpdateEquip(byte[] equipData, int slot, int itemId, bool isEquip)
         {
+            byte[] EquipData = new byte[28];
             fixed(byte* pt = equipData)
             {
                 int* slotid = (int*)(pt + slot * sizeof(int));
@@ -35,6 +36,8 @@ namespace GameServer.Managers
                 else
                     *slotid = 0;
             }
+            Array.Copy(equipData, EquipData, 28);
+            return EquipData;
         }
     }
 }
