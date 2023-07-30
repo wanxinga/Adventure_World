@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114633766375811488}
   - component: {fileID: 114748657170411186}
   m_Layer: 5
-  m_Name: ButtonDeny
+  m_Name: ButtonTeam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 114205552159981082}
   - component: {fileID: 114679189395946546}
   m_Layer: 5
-  m_Name: ButtonSubmit
+  m_Name: ButtonFriend
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 114545475354756082}
   - component: {fileID: 114107308800777824}
   m_Layer: 5
-  m_Name: ButtonAccept
+  m_Name: ButtonChat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.78736246, b: 0, a: 1}
+  m_Color: {r: 0.16981131, g: 0.16409439, b: 0.14177643, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.78736246, b: 0, a: 1}
+  m_Color: {r: 0.16981131, g: 0.16409439, b: 0.14177643, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -391,6 +391,8 @@ MonoBehaviour:
   Root: {fileID: 1706659466595704}
   targetId: 0
   targetName: 
+  friendButtonText: {fileID: 114094097753839088}
+  isAdd: 1
 --- !u!114 &114601162107304466
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -582,7 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.78736246, b: 0, a: 1}
+  m_Color: {r: 0.16981131, g: 0.16409439, b: 0.14177643, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

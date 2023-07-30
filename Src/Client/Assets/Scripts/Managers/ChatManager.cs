@@ -104,7 +104,7 @@ namespace Managers
             }
             if (channel == LocalChannel.Guild)
             {
-                if (User.Instance.CurrentCharacter.Guild == null)
+                if (!GuildManager.Instance.HasGuild)
                 {
                     this.AddSystemMessage("你没有加入任何公会");
                     return false;

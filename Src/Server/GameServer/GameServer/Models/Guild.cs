@@ -33,10 +33,15 @@ namespace GameServer.Models
         public bool JoinApply(NGuildApplyInfo apply)
         {
             var oldApply = this.Data.Applies.FirstOrDefault(v => v.CharacterId == apply.characterId);
-            if (oldApply != null)
+            if (oldApply != null&&oldApply.Result==2)
+            {
+                DBService.Instance.Entities.GuildApplies.Remove(oldApply);
+            }
+            else if(oldApply!=null&&oldApply.Result!=2)
             {
                 return false;
             }
+            
 
             var dbApply = DBService.Instance.Entities.GuildApplies.Create();
             dbApply.GuildId = apply.GuildId;
@@ -235,23 +240,27 @@ namespace GameServer.Models
         }
 
 
-        internal void ExecuteAdmin(GuildAdminCommand command, int targetId, int sourceId)
+        internal int ExecuteAdmin(GuildAdminCommand command, int targetId, int sourceId)
         {
             var target = GetDBMember(targetId);
             var source = GetDBMember(sourceId);
+            int result=-1;
             switch (command)
             {
                 case GuildAdminCommand.Promote:
                     target.Title = (int)GuildTitle.VicePresident;
+                    result = 0;
                     break;
                 case GuildAdminCommand.Depost:
                     target.Title = (int)GuildTitle.None;
+                    result = 1;
                     break;
                 case GuildAdminCommand.Transfer:
                     target.Title = (int)GuildTitle.President;
                     source.Title = (int)GuildTitle.None;
                     this.Data.LeaderID = targetId;
                     this.Data.LeaderName = target.Name;
+                    result = 2;
                     break;
                 case GuildAdminCommand.Kickout:
                     
@@ -259,6 +268,7 @@ namespace GameServer.Models
             }
             DBService.Instance.Save();
             timestamp = Time.timestamp;
+            return result;
         }
 
     }

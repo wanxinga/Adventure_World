@@ -42,7 +42,7 @@ namespace GameServer.Services
             {
                 sender.Session.Response.teamInviteRes = new TeamInviteResponse();
                 sender.Session.Response.teamInviteRes.Result = Result.Failed;
-                sender.Session.Response.teamInviteRes.Errormsg = "好友不在线";
+                sender.Session.Response.teamInviteRes.Errormsg = "对方不在线";
                 sender.SendResponse();
                 return;
             }

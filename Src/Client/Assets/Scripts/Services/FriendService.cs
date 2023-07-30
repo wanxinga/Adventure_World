@@ -67,6 +67,13 @@ namespace Services
             NetClient.Instance.SendMessage(message);
         }
 
+        /// <summary>
+        /// 
+        /// id代表要删除的好友id
+        /// friendId代表该好友的角色id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="friendId"></param>
         public void SendFriendRemoveRequest(int id, int friendId)
         {
             Debug.Log("SendFriendRemoveRequest");
@@ -105,6 +112,7 @@ namespace Services
         {
             Debug.Log("OnFriendList");
             FriendManager.Instance.allFriends = message.Friends;
+            FriendManager.Instance.Init(message.Friends);
             if (this.OnFriendUpdate != null)
                 this.OnFriendUpdate();
         }

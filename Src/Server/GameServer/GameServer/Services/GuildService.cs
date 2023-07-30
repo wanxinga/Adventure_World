@@ -88,12 +88,12 @@ namespace GameServer.Services
 
             if (guild.JoinApply(request.Apply))
             {
-                var leader = SessionManager.Instance.GetSession(guild.Data.LeaderID);
-                if (leader != null)
-                {
-                    leader.Session.Response.guildJoinReq = request;
-                    leader.SendResponse();
-                }
+                //var leader = SessionManager.Instance.GetSession(guild.Data.LeaderID);
+                //if (leader != null)
+                //{
+                //    leader.Session.Response.guildJoinReq = request;
+                //    leader.SendResponse();
+                //}
             }
             else
             {
@@ -109,11 +109,9 @@ namespace GameServer.Services
             Character character = sender.Session.Character;
             Log.InfoFormat("OnGuildJoinResponse: : GuildId:{0}:characterId:[{1}] {2}", response.Apply.GuildId, response.Apply.characterId, response.Apply.Name);
             var guild = GuildManager.Instance.GetGuild(response.Apply.GuildId);
-            if (response.Result==Result.Success)
-            {
-                guild.JoinApprove(response.Apply);
-            }
-
+            guild.JoinApprove(response.Apply);
+            if (response.Result == Result.Failed)
+                return;
             var requester = SessionManager.Instance.GetSession(response.Apply.characterId);
             if (requester!=null)
             {
@@ -152,7 +150,7 @@ namespace GameServer.Services
                 return;
             }
 
-            character.Guild.ExecuteAdmin(message.Command, message.Target, character.Id);
+            int result= character.Guild.ExecuteAdmin(message.Command, message.Target, character.Id);
 
             var target = SessionManager.Instance.GetSession(message.Target);
 
@@ -161,12 +159,18 @@ namespace GameServer.Services
                 target.Session.Response.guildAdmin = new GuildAdminResponse();
                 target.Session.Response.guildAdmin.Result = Result.Success;
                 target.Session.Response.guildAdmin.Command = message;
+                if (result == 0)
+                    target.Session.Response.guildAdmin.Errormsg = "您被会长升职";
+                if (result == 1)
+                    target.Session.Response.guildAdmin.Errormsg = "您被会长降职";
+                if (result == 2)
+                    target.Session.Response.guildAdmin.Errormsg = "您被转让为会长";
                 target.SendResponse();
-                return;
             }
 
             sender.Session.Response.guildAdmin.Result = Result.Success;
             sender.Session.Response.guildAdmin.Command = message;
+            sender.Session.Response.guildAdmin.Errormsg = "操作成功";
             sender.SendResponse();
         }
 

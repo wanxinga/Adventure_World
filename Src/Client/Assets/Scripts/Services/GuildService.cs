@@ -112,7 +112,7 @@ namespace Services
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
             message.Request.guildJoinRes = new GuildJoinResponse();
-            message.Request.guildJoinRes.Result = Result.Success;
+            message.Request.guildJoinRes.Result = accept ? Result.Success:Result.Failed;
             message.Request.guildJoinRes.Apply = request.Apply;
             message.Request.guildJoinRes.Apply.Result = accept ? ApplyResult.Accept : ApplyResult.Reject;
             NetClient.Instance.SendMessage(message);
@@ -124,7 +124,7 @@ namespace Services
             if (response.Result == Result.Success)
                 MessageBox.Show("加入公会成功", "公会");
             else
-                MessageBox.Show("加入公会失败", "公会");
+                MessageBox.Show(response.Errormsg, "公会");
         }
 
         public void SendGuildLeaveRequest()
@@ -186,7 +186,7 @@ namespace Services
             NetMessage message = new NetMessage();
             message.Request = new NetMessageRequest();
             message.Request.guildJoinRes = new GuildJoinResponse();
-            message.Request.guildJoinRes.Result = Result.Success;
+            message.Request.guildJoinRes.Result = accept ? Result.Success : Result.Failed;
             message.Request.guildJoinRes.Apply = apply;
             message.Request.guildJoinRes.Apply.Result = accept ? ApplyResult.Accept : ApplyResult.Reject;
             NetClient.Instance.SendMessage(message);
@@ -207,7 +207,10 @@ namespace Services
         private void OnGuildAdmin(object sender, GuildAdminResponse message)
         {
             Debug.LogFormat("GuildAdmin : {0} {1}", message.Command,message.Result);
-            MessageBox.Show(string.Format("执行操作:{0} 结果:{1} {2}", message.Command, message.Result, message.Errormsg));
+            if(message.Result==Result.Success)
+                MessageBox.Show(message.Errormsg);
+            if(message.Result==Result.Failed)
+                MessageBox.Show(message.Errormsg);
         }
 
 
