@@ -33,6 +33,8 @@ namespace Models
 
         public NTeamInfo TeamInfo { get; set; }
 
+        public Action ClickNpc;
+
         public void AddGold(int gold)
         {
             this.CurrentCharacter.Gold += gold;
@@ -44,13 +46,14 @@ namespace Models
             if (CurrentRide != id)
             {
                 CurrentRide = id;
+                CurrentCharacterObject.SendEntityEvent(EntityEvent.Ride, 0);
                 CurrentCharacterObject.SendEntityEvent(EntityEvent.Ride, CurrentRide);
 
             }
             else
             {
                 CurrentRide = 0;
-                CurrentCharacterObject.SendEntityEvent(EntityEvent.Ride, 0);
+                CurrentCharacterObject.SendEntityEvent(EntityEvent.Ride, CurrentRide);
             }
         }
     }

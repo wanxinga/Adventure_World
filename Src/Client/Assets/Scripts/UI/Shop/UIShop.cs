@@ -1,6 +1,7 @@
 ﻿using Common.Data;
 using Managers;
 using Models;
+using SkillBridge.Message;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -69,6 +70,11 @@ public class UIShop : UIWindow {
         if (this.selectedItem == null)
         {
             MessageBox.Show("请选择要购买的道具", "购买提示");
+            return;
+        }
+        if(this.selectedItem.item.Type==ItemType.Ride&& ItemManager.Instance.Items.ContainsKey(this.selectedItem.item.ID))
+        {
+            MessageBox.Show("您已拥有该坐骑", "购买提示");
             return;
         }
         if(!ShopManager.Instance.BuyItem(this.shop.ID,this.selectedItem.ShopItemID))

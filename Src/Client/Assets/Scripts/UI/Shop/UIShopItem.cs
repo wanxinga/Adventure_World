@@ -31,7 +31,7 @@ public class UIShopItem : MonoBehaviour,ISelectHandler {
     public int ShopItemID { get; set; }
 	private UIShop shop;
 
-	private ItemDefine item;
+	public ItemDefine item;
 	private ShopItemDefine ShopItem { get; set; }
 
 	// Use this for initialization

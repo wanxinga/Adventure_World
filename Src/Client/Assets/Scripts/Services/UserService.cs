@@ -57,7 +57,7 @@ namespace Services
         {
             Debug.Log("ConnectToServer() Start ");
             //NetClient.Instance.CryptKey = this.SessionId;
-            NetClient.Instance.Init("127.0.0.1", 8000);
+            NetClient.Instance.Init("127.0.0.1", 8100);
             NetClient.Instance.Connect();
         }
 

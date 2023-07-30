@@ -1,5 +1,7 @@
-﻿using Managers;
+﻿using Common.Data;
+using Managers;
 using Models;
+using SkillBridge.Message;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -32,15 +34,17 @@ public class UIBag : UIWindow {
     IEnumerator InitBags()
     {
         this.money.text = User.Instance.CurrentCharacter.Gold.ToString();
+        int j = 0;
         for (int i = 0; i < BagManager.Instance.Items.Length; i++)
         {
-			var item = BagManager.Instance.Items[i];
-            if (item.ItemId > 0)
+            var item = BagManager.Instance.Items[i];
+            if (item.ItemId > 0 && ItemManager.Instance.Items[item.ItemId].Define.Type != ItemType.Ride )
             {
-                GameObject go = Instantiate(bagItem, slots[i].transform);
+                GameObject go = Instantiate(bagItem, slots[j].transform);
                 var ui = go.GetComponent<UIIconItem>();
                 var def = ItemManager.Instance.Items[item.ItemId].Define;
                 ui.SetMainIcon(def.Icon, item.Count.ToString());
+                j++;
             }
         }
         for(int i = BagManager.Instance.Items.Length; i < slots.Count; i++)

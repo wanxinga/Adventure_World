@@ -107,28 +107,34 @@ public class EntityController : MonoBehaviour, IEntityNotify
 
     public void Ride(int rideId)
     {
-        if (currentRide == rideId) return;
+        if (rideId!=0)
+            this.doRide(rideId);
+        else
+            this.underRide(rideId);
+        
+    }
+
+    public void underRide(int rideId)
+    {
+        if (currentRide == 0)
+            return;
+        currentRide = 0;
+        Destroy(this.rideController.gameObject);
+        this.rideController = null;
+        this.anim.transform.localPosition = Vector3.zero;
+        this.anim.SetLayerWeight(1, 0);
+    }
+
+    
+    public void doRide(int rideId)
+    {
         currentRide = rideId;
         if (rideId > 0)
         {
             this.rideController = GameObjectManager.Instance.LoadRide(rideId, this.transform);
-        }
-        else
-        {
-            Destroy(this.rideController.gameObject);
-            this.rideController = null;
-        }
-
-        if (this.rideController == null)
-        {
-            this.anim.transform.localPosition = Vector3.zero;
-            this.anim.SetLayerWeight(1, 0);
-        }
-        else
-        {
-            this.rideController.SetRider(this);
-            this.anim.SetLayerWeight(1, 1);
-        }
+        }       
+        this.rideController.SetRider(this);
+        this.anim.SetLayerWeight(1, 1);
     }
 
     public void SetRidePosition(Vector3 position)

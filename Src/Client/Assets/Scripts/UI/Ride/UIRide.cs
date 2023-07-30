@@ -13,6 +13,7 @@ public class UIRide : UIWindow {
 	public GameObject itemPrefab;
 	public ListView listMain;
 	public UIRideItem selectedItem;
+	public Text buttonText;
 
 	// Use this for initialization
 	void Start()
@@ -29,6 +30,14 @@ public class UIRide : UIWindow {
 	{
 		this.selectedItem = item as UIRideItem;
 		this.descript.text = this.selectedItem.item.Define.Description;
+        if (this.selectedItem.item.Id == User.Instance.CurrentRide)
+        {
+			this.buttonText.text = "离开坐骑";
+        }
+        else
+        {
+			this.buttonText.text = "召唤坐骑";
+		}
 	}
 
 	void RefreshUI()
@@ -64,6 +73,19 @@ public class UIRide : UIWindow {
 		{
 			MessageBox.Show("请选择要召唤的坐骑","提示");
 			return;
+		}
+		int currentRideId = User.Instance.CurrentRide;
+		if (currentRideId == 0)
+        {
+			buttonText.text = "离开坐骑";
+        }
+		else if (currentRideId == this.selectedItem.item.Id)
+        {
+			buttonText.text = "召唤坐骑";
+		}
+        else
+        {
+			buttonText.text = "离开坐骑";
 		}
 		User.Instance.Ride(this.selectedItem.item.Id);
 	}

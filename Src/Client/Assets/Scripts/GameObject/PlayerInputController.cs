@@ -8,6 +8,7 @@ using Services;
 using Managers;
 using UnityEngine.AI;
 using System;
+using Models;
 
 public class PlayerInputController : MonoBehaviour {
 
@@ -89,6 +90,7 @@ public class PlayerInputController : MonoBehaviour {
             this.SendEntityEvent(EntityEvent.Idle);
         }
         NavPathRenderer.Instance.SetPath(null, Vector3.zero);
+
     }
 
     public void NavMove()
@@ -111,6 +113,10 @@ public class PlayerInputController : MonoBehaviour {
         if (agent.isStopped || agent.remainingDistance < 2f)
         {
             StopNav();
+            if (User.Instance.ClickNpc != null)
+            {
+                User.Instance.ClickNpc();
+            }
             return;
         }
     }
