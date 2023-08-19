@@ -30,11 +30,12 @@ public class NpcController : MonoBehaviour {
 		RefreshNpcStatus();
 		QuestManager.Instance.OnQuestStatusChanged += OnQuestStatusChanged;
 		NPCManager.Instance.npcControllers[npcID] = this;
-	}
+}
 
 
 	void OnQuestStatusChanged(Quest quest)
     {
+		
 		this.RefreshNpcStatus();
 
 	}
@@ -102,6 +103,7 @@ public class NpcController : MonoBehaviour {
 			yield return null;
         }
 	}
+
 
 	void OnMouseDown()
     {
